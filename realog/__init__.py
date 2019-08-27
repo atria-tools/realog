@@ -8,7 +8,5 @@
 ## @license MPL v2.0 (see license file)
 ##
 
-
-
 # nothing to do.
 

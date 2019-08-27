@@ -231,11 +231,12 @@ def todo(input, force=False):
 ##
 ## @brief Print an error log
 ## @param[in] input (string) Value to print if level is enough
-## @param[in] thread_id (int) Current thead ID of the builder thread
-## @param[in] force (bool) force display (no check of log level)
-## @param[in] crash (bool) build error has appear ==> request stop of all builds
+## @param[in] thread_id (int) Current thead ID of the builder thread (default None)
+## @param[in] force (bool) force display (no check of log level) (default False)
+## @param[in] crash (bool) build error has appear ==> request stop of all builds (default True)
+## @param[in] ret_value (int) program return value (default -1)
 ##
-def error(input, thread_id=-1, force=False, crash=True):
+def error(input, thread_id=None, force=False, crash=True, ret_value=-1):
 	global debug_lock
 	global debug_level
 	if    debug_level >= 1 \
@@ -246,11 +247,11 @@ def error(input, thread_id=-1, force=False, crash=True):
 	if crash == True:
 		if debug_callback != None:
 			debug_callback()
-		if thread_id != -1:
+		if thread_id != None:
 			threading.interrupt_main()
 		if debug_last_log != None:
 			local_print(color_red + debug_last_log + color_default)
-		exit(-1)
+		exit(ret_value)
 		#os_exit(-1)
 		#raise "error happend"
 
