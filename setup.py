@@ -41,6 +41,7 @@ setup(name='realog',
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
       ],
+      long_description_content_type="text/markdown",
       keywords='log logs debug print console',
       include_package_data = True,
       zip_safe=False)

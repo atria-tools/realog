@@ -4,44 +4,46 @@ Atria Debug
 `atria debug` is a simple python librairy that permit to display application logs on console with a atria level.
 
 
-.. image:: https://badge.fury.io/py/realog.png
-    :target: https://pypi.python.org/pypi/realog
+[![Badge](https://badge.fury.io/py/realog.png](https://pypi.python.org/pypi/realog)
 
 
 Instructions
 ------------
 
 Simply include the log system:
-
+```
   from realog import debug
+```
 
 Configure the level:
-
-  ## Set log level of the console log system
-  ## parameter: Value of the log level:
-  ##              0: None
-  ##              1: error
-  ##              2: warning
-  ##              3: info
-  ##              4: debug
-  ##              5: verbose
-  ##              6: extreme_verbose
-  debug.set_level(6)
+```
+## Set log level of the console log system
+## parameter: Value of the log level:
+##              0: None
+##              1: error
+##              2: warning
+##              3: info
+##              4: debug
+##              5: verbose
+##              6: extreme_verbose
+debug.set_level(6)
+```
 
 Enable the color:
-
-  enable_color()
-  disable_color()
-
+```
+enable_color()
+disable_color()
+```
 
 Use it:
-
-  debug.error("lkjlkjlkj" + "kljhlkj" + str(1513))
-  debug.warning("lkjlkjlkj" + "kljhlkj" + str(1513))
-  debug.ingo("lkjlkjlkj" + "kljhlkj" + str(1513))
-  debug.debug("lkjlkjlkj" + "kljhlkj" + str(1513))
-  debug.verbose("lkjlkjlkj" + "kljhlkj" + str(1513))
-  debug.extreme_verbose("lkjlkjlkj" + "kljhlkj" + str(1513))
+```
+debug.error("lkjlkjlkj" + "kljhlkj" + str(1513))
+debug.warning("lkjlkjlkj" + "kljhlkj" + str(1513))
+debug.ingo("lkjlkjlkj" + "kljhlkj" + str(1513))
+debug.debug("lkjlkjlkj" + "kljhlkj" + str(1513))
+debug.verbose("lkjlkjlkj" + "kljhlkj" + str(1513))
+debug.extreme_verbose("lkjlkjlkj" + "kljhlkj" + str(1513))
+```
 
 git repository
 --------------
@@ -59,21 +61,24 @@ Installation
 Requirements: ``Python >= 2.7`` and ``pip``
 
 Just run:
-
-  pip install realog
+```
+pip install realog
+```
 
 Install pip on debian/ubuntu:
-
-  sudo apt-get install pip
+```
+sudo apt-get install pip
+```
 
 Install pip on ARCH-linux:
-
-  sudo pacman -S pip
+```
+sudo pacman -S pip
+```
 
 Install pip on MacOs:
-
-  sudo easy_install pip
-
+```
+sudo easy_install pip
+```
 
 License (MPL v2.0)
 ---------------------
